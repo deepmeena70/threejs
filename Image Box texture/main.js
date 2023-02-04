@@ -19,7 +19,7 @@ import WebGL from 'capabilities';
 
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(1,1);
+  texture.repeat.set(1, 1);
 
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -31,7 +31,7 @@ import WebGL from 'capabilities';
   const geometry = new THREE.SphereGeometry(1000, 1000, 1000);
   const material = new THREE.MeshBasicMaterial({
     color: 'white',
-    map: texture
+    map: texture,
   });
 
   const mesh = new THREE.Mesh(geometry, material);
@@ -60,4 +60,13 @@ import WebGL from 'capabilities';
     const warning = WebGL.getWebGLErrorMessage();
     document.getElementById('container').appendChild(warning);
   }
+
+  const onWindowResize = () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  };
+
+  addEventListener('resize', onWindowResize);
 })();
