@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(238, 229, 233);
+  background: radial-gradient(circle, rgb(238, 229, 233) 0%, rgb(146, 220, 229) 71%, rgb(238, 229, 233) 100%);
+  color: #000;
+  overflow: hidden;
+}
+
+a {
+  color: #48f;
+}/*# sourceMappingURL=style.css.map */
