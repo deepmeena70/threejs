@@ -18,10 +18,10 @@ import {
   const objects = [];
   let current = 0;
 
+  // on resize set renderer size
   const onWindowResize = () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-
     renderer.setSize(window.innerWidth, window.innerHeight);
   };
 
@@ -98,7 +98,6 @@ import {
     }
 
     // Cube
-
     const amount = 8;
     const separationCube = 150;
     const offset = ((amount - 1) * separationCube) / 2;
@@ -112,7 +111,6 @@ import {
     }
 
     // Random
-
     for (let i = 0; i < particlesTotal; i++) {
       positions.push(
         Math.random() * 4000 - 2000,
@@ -122,7 +120,6 @@ import {
     }
 
     // Sphere
-
     const radius = 750;
 
     for (let i = 0; i < particlesTotal; i++) {

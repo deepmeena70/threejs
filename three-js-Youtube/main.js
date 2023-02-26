@@ -11,7 +11,7 @@ import {
   let camera, scene, renderer;
   let controls;
 
-  // this 👇🏻 Element function works as a constructor
+  // this 👇🏻 function works as a constructor and return a object
   function Element(id, x, y, z, ry) {
     const div = document.createElement('div');
     div.style.width = '480px';
